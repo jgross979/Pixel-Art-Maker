@@ -29,6 +29,12 @@ let controller = (function(UICtrl){
     makeGrid();
   });
 
+  $('body').on('keypress', function(e){
+    if(e.which === 13){
+      makeGrid();
+    };
+  })
+
   function clearGrid(){
     let row = $('tr');
     let col = $('td');
@@ -51,5 +57,6 @@ let controller = (function(UICtrl){
   DOM.canvas.on('mouseover', 'td', function(e){
     $(this).css('background', DOM.color.val());
   })
+
 
 })(UIController);
