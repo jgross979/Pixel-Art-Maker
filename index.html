@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Pixel Art Maker!</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="designs.js"></script>
-</head>
-<body>
-    <h1 class= 'title border'>Lab: Pixel Art Maker</h1>
+  </head>
+  <body>
+    <div id = "container">
+      <div class = "title">
+        <h1 class= ' main-title border'>Pixel Art Maker</h1>
+      </div>
 
-    <div class= 'settings border'>
-      <h2>Choose Grid Size</h2>
-      <form id="sizePicker">
-          Grid Height:
-          <input type="number" id="input_height" name="height" min="1" value="40">
-          Grid Width:
-          <input type="number" id="input_width" name="width" min="1" value="40">
-          <input type="button" id="submit_button" value= "Submit/Clear">
-      </form>
+      <div class= 'settings border'>
+        <h2>Choose Grid Size</h2>
+        <form id="sizePicker">
+            <label class = "size_descr">Grid Height:
+              <input type="number" id="input_height" name="height" min="1" max = "60" value="40">
+            </label>
+            <label class = "size_descr">Grid Width:
+              <input type="number" id="input_width" name="width" min="1" max = "60" value="40">
+            </label>
+            <input type="button" id="submit_button" value= "Submit/Clear">
+        </form>
 
-      <h2>Pick A Color</h2>
-      <input type="color" id="colorPicker">
+        <h2>Pick A Color</h2>
+        <input type="color" class = "color" id="penColorPicker" value = "#63ea67">
+        <h2>Pick a Background</h2>
+        <input type="color" class = "color" id="backgroundColor" value = "#C5C6C7">
+      </div>
+
+      <div class ="canvas_container border">
+        <h2>Design Canvas</h2>
+          <table id="pixel_canvas">
+          </table>
+      </div>
     </div>
-
-    <div class ="canvas_container border">
-      <h2>Design Canvas</h2>
-        <table id="pixel_canvas">
-        </table>
-    </div>
-</body>
+  </body>
 </html>

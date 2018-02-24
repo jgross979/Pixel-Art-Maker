@@ -1,18 +1,23 @@
 *{
   font-family: futura;
 }
-
+html{
+  height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-image: url(http://hdwallpaper2013.com/wp-content/uploads/2013/02/White-Background-Images-HD-Wallpaper.jpg);
+    /* background-image: url(http://hdwallpaper2013.com/wp-content/uploads/2013/02/White-Background-Images-HD-Wallpaper.jpg); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    height:100%;
 
 }
 
 h1 {
     font-family: Monoton;
-    font-size: 70px;
+    font-size: 50px;
     margin: 0.2em;
 }
 
@@ -31,9 +36,10 @@ td {
 }
 
 table {
-  border: 1px solid black;
+    border: 1px solid black;
     border-collapse: collapse;
     margin: 0 auto;
+    cursor:crosshair;
 }
 
 tr {
@@ -48,25 +54,81 @@ input[type=number] {
     width: 6em;
 }
 
+
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  height: inherit;
+  min-width: 944px;
+}
+
 .title{
-  background: #fdfcf1;
+  color: #63ea67;
+  background: #232427;
+  order: 0;
+  margin: 0;
+  width: 100%;
+  height: 150px;
+}
+
+.main-title{
+  margin: 25px auto;
+
 }
 
 .settings{
-  background: #fdfcf1;
-  width: 40%;
-  margin:auto;
-  padding-bottom: 10px;
+  color: #63ea67;
+  background: #232427;
+  order: 1;
+  width: 20%;
+  height: 100%;
 }
 
+.size_descr{
+  display: block;
+  font-size: 1.1em;
+}
+
+#submit_button{
+  margin: 10px;
+  background: none;
+  color: #63ea67;
+  border: 2px solid #63ea67;
+  border-style: inset;
+  border-radius: 3px;
+  font-size: 1em;
+  width: 125px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#submit_button:hover{
+  background: #cdced4;
+  color: black;
+}
+
+.color{
+  border-radius: 6px;
+  width: 64px;
+  height: 48px;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+
 .canvas_container{
-  background: #fdfcf1;
-  padding-bottom: 10px;
-  width: 40%;
-  margin: auto;
+  background: #232427;
+  color: #63ea67;
+  order: 2;
+  margin: 0;
+  width: 80%;
+  height: 100%;
 }
 
 .border{
-  border: 5px dashed black;
+  outline: solid #63ea67 3px; */
   border-radius: 5px;
 }
